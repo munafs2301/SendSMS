@@ -39,11 +39,8 @@ namespace SmsService.BackgroundTask
             if (!response.IsSuccessStatusCode)
             {
                 UpdateMessageStatus(receivedMessage, MessageStatus.Errored);
-                _logger.Error("--> Message not sent to Third Party");
-                return;
-                /// Add Assumption to readme that a cron job will run periodically to pick up failed messages
-                /// //Assume there is background service to run the ProcessClientMessageTask throughout the application lifescop because it has to listen for SmsCommand 
-                /// Assume We will implement a cache mechanism for persistence purpose. Will be implemented in IMessageRepo
+                _logger.Error("Message not sent to Third Party");
+                return;                
             }
 
             UpdateMessageStatus(receivedMessage, MessageStatus.SentExternally);
@@ -63,7 +60,7 @@ namespace SmsService.BackgroundTask
             }
 
             UpdateMessageStatus(receivedMessage, MessageStatus.Published);
-            _logger.Info("--> SmsSent Event Published successfully successfully");
+            _logger.Info("SmsSent Event Published successfully successfully");
             return;
         }
 

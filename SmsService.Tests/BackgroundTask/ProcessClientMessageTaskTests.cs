@@ -49,8 +49,8 @@ namespace SmsService.Tests.BackgroundTask
             _sendSMSHttpClient.Verify(httpClient => httpClient.PostToExternalApi<IMessage>(It.IsAny<Message>()), Times.Once);
             _eventBus.Verify(bus => bus.PublishEvent(It.Is<SmsSentEvent>(e => e.EventType == EventConstants.SmsSentEvent)), Times.Once);
             _messageRepo.Verify(repo => repo.UpdateMessage(It.IsAny<Message>()), Times.Exactly(2));
-            _logger.Verify(logger => logger.Error(It.IsAny<string>()), Times.Never); // Assuming successful execution won't lead to an error log
-            _logger.Verify(logger => logger.Info(It.IsAny<string>()), Times.Exactly(2)); // Executed twice: once for success and once for publishing even
+            _logger.Verify(logger => logger.Error(It.IsAny<string>()), Times.Never); 
+            _logger.Verify(logger => logger.Info(It.IsAny<string>()), Times.Exactly(2)); 
 
         }
 
