@@ -22,7 +22,7 @@ I will create background jobs for 3 stages of ProcessClientMessageTask. So, if t
 #### SmsService.Tests
 1. Open your command terminal.
 2. At the root of the "SmsService.Tests" folder, enter the following command: **`dotnet test`**
-3. The test ran successfully if you see this message: "Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4"
+3. The test ran successfully if you see this message: *"Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4"*
 
 ## Assumptions
 1. There is a cron job that will run periodically to pick up failed messages and resend
