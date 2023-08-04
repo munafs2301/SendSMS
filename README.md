@@ -1,8 +1,7 @@
 # SendSMS
-## Endpoints
-Login: https://localhost:7089/api/v1/login
-
- Access: https://localhost:7089/api/v1/access/fruit?type=3
+## Overview
+This project is a microservice that listens for a message on a queue, consumes an external API and publishes an event to ;istening consumers.
+The specific implementation gets a message from a client, it listens on a specific message queue named "SmsService". It consumes message from this queue
 
 ## User Credentials for testing
 Email= "frontoffice@processrus.com"
@@ -13,6 +12,9 @@ Password = "BackOffice@01
 
 Email= "admin@processrus.com"
 Password = "Admin@01"
+
+## What I would do if I had more time
+I will create background jobs for 3 stages of ProcessClientMessageTask. So, if there is a failure it retries the process.
 
 ## Direction for testing
 1. Run  Application (At the root of the project, type the command     **dotnet run**    and press enter)
