@@ -3,7 +3,7 @@
 This project is a microservice that listens for a message on a queue, consumes an external API and publishes an event to listening consumers.
 The specific implementation is a microservice that sends SMS to users
 
-#### FLOW
+#### Flow
 1. It listens for SMS commands on a specific message queue named "SmsService". 
 2. It consumes messages from this queue.
 3. Then it sends the message as a request to a third-party SMS service.
