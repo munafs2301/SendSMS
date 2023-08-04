@@ -23,3 +23,4 @@ Password = "Admin@01"
 1. Add Assumption to readme that a cron job will run periodically to pick up failed messages
 2. Assume there is background service to run the ProcessClientMessageTask throughout the application lifescop because it has to listen for SmsCommand 
 3. Assume We will implement a cache mechanism for persistence purpose. Will be implemented in IMessageRepo
+4. Assume there will be a retry mechanism for connection in the EventBus implementation
