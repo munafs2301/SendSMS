@@ -15,6 +15,7 @@ Note: At every stage, the status of the sent messages is updated. So there is a 
 I will create background jobs for 3 stages of ProcessClientMessageTask. So, if there is a failure it retries the process.
 
 ## Direction for running and testing the project
+You need to have .Net SDK 6 installed on our OS
 #### SmsService
 1. Open your command terminal.
 2. At the root of the "SmsService" folder, enter the following command: **`dotnet run`**
