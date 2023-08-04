@@ -18,11 +18,11 @@ I will create background jobs for 3 stages of ProcessClientMessageTask. So, if t
 You need to have .Net SDK 6 installed on our OS
 #### SmsService
 1. Open your command terminal.
-2. At the root of the "SmsService" folder, enter the following command: **`dotnet run`**
+2. At the root of the "SmsService" folder, enter the following command: `dotnet run`
 3. The project ran successfully if you see this message: "Now listening on: https://localhost:7157"
 #### SmsService.Tests
 1. Open your command terminal.
-2. At the root of the "SmsService.Tests" folder, enter the following command: **`dotnet test`**
+2. At the root of the "SmsService.Tests" folder, enter the following command: `dotnet test`
 3. The test ran successfully if you see this message: *"Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4"*
 
 ## Assumptions
